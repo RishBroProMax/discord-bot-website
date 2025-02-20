@@ -74,7 +74,7 @@ export function Hero() {
             <div className="relative glass-effect p-8 rounded-2xl border border-primary/20">
               <div className="relative w-32 h-32 mx-auto">
                 <Image
-                  src="https://raw.githubusercontent.com/StackBlitz/discord-bot-landing/main/public/bot-logo.png"
+                  src="https://cdn.imrishmika.site/images/bot.png"
                   alt="Bot Logo"
                   width={128}
                   height={128}
