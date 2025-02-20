@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 40% 2%;
+    --foreground: 210 40% 98%;
+    --card: 222 40% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 40% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 40% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 40% 8%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 40% 12%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 40% 12%;
+    --input: 217 40% 12%;
+    --ring: 224 76% 48%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid hsl(var(--primary));
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: hsl(var(--primary));
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hexagon-bg {
+  background-image: radial-gradient(
+    hsl(var(--primary) / 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+  backdrop-filter: blur(3px);
+}
+
+.card-hover {
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px) rotateX(15deg) rotateY(15deg) translateZ(30px);
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3),
+    0 0 40px hsl(var(--primary) / 0.2),
+    0 0 80px hsl(var(--primary) / 0.1);
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  animation: float 8s infinite;
+  filter: blur(1px);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-100px) translateX(50px) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-200px) translateX(100px) scale(1);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-100px) translateX(150px) scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+.hero-card {
+  transform-style: preserve-3d;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-card:hover {
+  transform: perspective(1500px) rotateX(15deg) rotateY(15deg) translateZ(40px);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 60px hsl(var(--primary) / 0.3),
+    0 0 120px hsl(var(--primary) / 0.2);
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.status-online {
+  background-color: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+.status-offline {
+  background-color: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.footer-gradient {
+  background: linear-gradient(
+    to top,
+    hsl(var(--background)),
+    transparent
+  );
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    transform: none !important;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+  }
+}
