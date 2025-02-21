@@ -32,9 +32,9 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a></li>
-              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Terms</a></li>
-              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</a></li>
+              <li><a href="/legal/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a></li>
+              <li><a href="/legal/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms</a></li>
+              <li><a href="/legal/cookies/" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
         </div>
