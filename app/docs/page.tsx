@@ -148,7 +148,168 @@ export default function Documentation() {
                 </Card>
               </section>
 
-              {/* Add more sections as needed */}
+              <section id="moderation" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Moderation</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Set up moderation commands to keep your server safe.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`module.exports = {
+  name: "ban",
+  description: "Ban a user",
+  execute(message, args) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member.ban({ reason: "They were bad!" }).then(() => {
+          message.reply(\`Successfully banned \${user.tag}\`);
+        }).catch(err => {
+          message.reply("I was unable to ban the member");
+        });
+      } else {
+        message.reply("That user isn't in this guild!");
+      }
+    } else {
+      message.reply("You didn't mention the user to ban!");
+    }
+  }
+};`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="auto-moderation" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Auto-moderation</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Configure auto-moderation settings to automatically handle rule violations.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`// Example auto-moderation setup
+client.on('messageCreate', message => {
+  if (message.content.includes('badword')) {
+    message.delete();
+    message.channel.send(\`Watch your language, \${message.author}!\`);
+  }
+});`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="custom-commands" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Custom Commands</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Create custom commands to enhance your bot's functionality.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`module.exports = {
+  name: "say",
+  description: "Make the bot say something",
+  execute(message, args) {
+    const text = args.join(" ");
+    message.delete();
+    message.channel.send(text);
+  }
+};`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="rest-api" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">REST API</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Use the REST API to interact with your bot programmatically.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`const fetch = require("node-fetch");
+
+fetch("https://discord.com/api/v9/applications/YOUR_APP_ID/commands", {
+  method: "POST",
+  headers: {
+    "Authorization": \`Bot \${process.env.BOT_TOKEN}\`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: "hello",
+    description: "Replies with Hello, World!",
+    options: []
+  })
+}).then(response => response.json()).then(data => {
+  console.log(data);
+});`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="websocket" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">WebSocket Events</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Handle real-time events using WebSockets.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`const WebSocket = require("ws");
+
+const ws = new WebSocket("wss://gateway.discord.gg/?v=9&encoding=json");
+
+ws.on("open", () => {
+  ws.send(JSON.stringify({
+    op: 2,
+    d: {
+      token: process.env.BOT_TOKEN,
+      intents: 513,
+      properties: {
+        $os: "linux",
+        $browser: "my_library",
+        $device: "my_library"
+      }
+    }
+  }));
+});
+
+ws.on("message", (data) => {
+  const payload = JSON.parse(data);
+  const { t, event, op, d } = payload;
+
+  if (t === "MESSAGE_CREATE") {
+    console.log(\`Message received: \${d.content}\`);
+  }
+});`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="rate-limits" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Rate Limits</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Understand and handle rate limits to ensure smooth operation.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`const fetch = require("node-fetch");
+
+fetch("https://discord.com/api/v9/users/@me", {
+  method: "GET",
+  headers: {
+    "Authorization": \`Bot \${process.env.BOT_TOKEN}\`
+  }
+}).then(response => {
+  if (response.status === 429) {
+    console.log("Rate limited, retry after:", response.headers.get("Retry-After"));
+  } else {
+    return response.json();
+  }
+}).then(data => {
+  console.log(data);
+});`}</code>
+                  </pre>
+                </Card>
+              </section>
+
             </div>
           </motion.div>
         </div>
