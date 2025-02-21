@@ -25,7 +25,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="https://imrishmika.site/#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
               <li><a href="https://blog.imrishmika.site/" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="https://imrishmika.site/#pricing" className="text-muted-foreground hover:text-primary transition-colors"><Pricing></Pricing></a></li>
+              <li><a href="https://imrishmika.site/#pricing" className="text-muted-foreground hover:text-primary transition-colors"></a></li>
             </ul>
           </div>
           
