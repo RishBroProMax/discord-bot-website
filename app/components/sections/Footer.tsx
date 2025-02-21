@@ -42,7 +42,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-primary/10">
           <div className="flex items-center gap-2 text-muted-foreground">
             <Heart className="h-4 w-4 text-red-500" />
-            <p>Made with love for the Discord community</p>
+            <p>Made with love for the Discord community By Rishmika Sandanu</p>
           </div>
           
           <div className="flex gap-4">
@@ -70,7 +70,7 @@ export function Footer() {
           </div>
           
           <p className="text-muted-foreground text-sm">
-            © 2025 Your Bot Name. All rights reserved.
+            © 2025 Alexia. All rights reserved.
           </p>
         </div>
       </div>
