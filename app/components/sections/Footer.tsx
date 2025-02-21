@@ -14,6 +14,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary">Links</h3>
             <ul className="space-y-2">
+             <li><a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
               <li><a href="/status" className="text-muted-foreground hover:text-primary transition-colors">Status</a></li>
               <li><a href="/docs" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a></li>
               <li><a href="/support" className="text-muted-foreground hover:text-primary transition-colors">Support</a></li>
