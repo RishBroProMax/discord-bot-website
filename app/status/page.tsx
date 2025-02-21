@@ -40,7 +40,7 @@ export default function Status() {
           <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
             System Status
           </h1>
-          <Card className="inline-block p-4 backdrop-blur-sm bg-card/50 border-primary/10">
+          <Card className="inline-block p-4 backdrop-blur-sm bg-card/50">
             <div className="flex items-center gap-2">
               <span className="status-indicator status-online" />
               <span className="text-muted-foreground">All systems operational</span>
@@ -61,7 +61,7 @@ export default function Status() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {services.map((service, index) => (
-                <Card key={index} className="p-4 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+                <Card key={index} className="p-4 backdrop-blur-sm bg-card/50">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="status-indicator status-online" />
@@ -86,7 +86,7 @@ export default function Status() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {regions.map((region, index) => (
-                <Card key={index} className="p-4 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+                <Card key={index} className="p-4 backdrop-blur-sm bg-card/50">
                   <div className="flex items-center gap-2">
                     <span className="status-indicator status-online" />
                     <span>{region.name}</span>
@@ -106,7 +106,7 @@ export default function Status() {
               <Clock className="h-6 w-6 text-primary" />
               Uptime
             </h2>
-            <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+            <Card className="p-6 backdrop-blur-sm bg-card/50">
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Last 30 days</span>
@@ -129,7 +129,7 @@ export default function Status() {
               <AlertTriangle className="h-6 w-6 text-primary" />
               Incident History
             </h2>
-            <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+            <Card className="p-6 backdrop-blur-sm bg-card/50">
               {incidents.map((incident, index) => (
                 <div key={index} className="border-b border-primary/10 last:border-0 pb-4 mb-4 last:pb-0 last:mb-0">
                   <div className="flex items-center justify-between mb-2">
