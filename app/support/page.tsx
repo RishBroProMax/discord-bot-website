@@ -52,7 +52,7 @@ export default function Support() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover h-full">
+              <Card className="p-6 backdrop-blur-sm bg-card/50  h-full">
                 <div className="flex flex-col items-center text-center">
                   <div className="p-3 rounded-full bg-primary/10 mb-4">
                     <channel.icon className="h-6 w-6 text-primary" />
@@ -80,7 +80,7 @@ export default function Support() {
           transition={{ delay: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
             <div className="space-y-4">
               {[
@@ -107,7 +107,7 @@ export default function Support() {
             </div>
           </Card>
 
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">Support Hours</h2>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
