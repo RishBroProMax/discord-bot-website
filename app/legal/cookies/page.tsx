@@ -31,14 +31,14 @@ export default function CookiePolicy() {
           transition={{ delay: 0.1 }}
           className="space-y-8"
         >
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">What Are Cookies?</h2>
             <p className="text-muted-foreground">
               Cookies are small text files that are placed on your computer or mobile device when you visit our website. They help us provide you with a better experience and understand how you use our services.
             </p>
           </Card>
 
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">Types of Cookies We Use</h2>
             <div className="space-y-4">
               <div>
