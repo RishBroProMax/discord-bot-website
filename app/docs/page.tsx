@@ -93,13 +93,23 @@ export default function Documentation() {
             
             <div className="prose prose-invert max-w-none">
               <section id="installation" className="mb-12">
-                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                <Card className="p-6 backdrop-blur-sm bg-card/50 ">
                   <h2 className="text-2xl font-semibold mb-4">Installation</h2>
                   <p className="text-muted-foreground mb-4">
-                    Getting started with our Discord bot is easy. Follow these steps to add it to your server.
+                    Getting started with Installing All dependencies
                   </p>
                   <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
-                    <code>npm install discord-bot-client</code>
+                    <code>npm i --force</code>
+                  </pre>
+                </Card>
+
+                <Card className="p-6 backdrop-blur-sm bg-card/50 ">
+                  <h2 className="text-2xl font-semibold mb-4">env Variables</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Fill All things in the env file
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>Open ENV file</code>
                   </pre>
                 </Card>
               </section>
