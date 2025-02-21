@@ -100,12 +100,11 @@
 
 .particle {
   position: absolute;
-  width: 3px;
-  height: 3px;
   background: hsl(var(--primary));
   border-radius: 50%;
   animation: float 8s infinite;
   filter: blur(1px);
+  opacity: 0;
 }
 
 @keyframes float {
@@ -129,11 +128,12 @@
 
 .hero-card {
   transform-style: preserve-3d;
+  perspective: 1000px;
   transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hero-card:hover {
-  transform: perspective(1500px) rotateX(15deg) rotateY(15deg) translateZ(40px);
+  transform: perspective(1500px) rotateX(15deg) rotateY(15deg) translateZ(40px) scale(1.05);
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.4),
     0 0 60px hsl(var(--primary) / 0.3),
@@ -174,6 +174,10 @@
     hsl(var(--background)),
     transparent
   );
+}
+
+.perspective-1000 {
+  perspective: 1000px;
 }
 
 @media (max-width: 768px) {

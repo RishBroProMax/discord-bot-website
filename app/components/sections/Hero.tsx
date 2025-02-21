@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import { Bot, Disc as Discord } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Particles = () => {
   return (
     <div className="particles">
-      {[...Array(40)].map((_, i) => (
+      {[...Array(60)].map((_, i) => (
         <div
           key={i}
           className="particle"
@@ -16,6 +17,8 @@ const Particles = () => {
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
             animationDelay: `${Math.random() * 8}s`,
+            width: `${Math.random() * 3 + 1}px`,
+            height: `${Math.random() * 3 + 1}px`,
           }}
         />
       ))}
@@ -68,19 +71,19 @@ export function Hero() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative inline-block mb-8 hero-card"
+            className="relative inline-block mb-8 hero-card group"
           >
-            <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-            <div className="relative glass-effect p-8 rounded-2xl border border-primary/20">
-              <div className="relative w-32 h-32 mx-auto">
+            <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full group-hover:bg-primary/30 transition-colors" />
+            <div className="relative glass-effect p-8 rounded-2xl border border-primary/20 group-hover:border-primary/40 transition-all duration-500">
+              <div className="relative w-32 h-32 mx-auto transform group-hover:scale-110 transition-transform duration-500">
                 <Image
-                  src="https://cdn.imrishmika.site/images/bot.png"
+                  src="https://raw.githubusercontent.com/StackBlitz/discord-bot-landing/main/public/bot-logo.png"
                   alt="Bot Logo"
                   width={128}
                   height={128}
-                  className="rounded-2xl"
+                  className="rounded-2xl shadow-xl"
                 />
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-background" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-background animate-pulse" />
               </div>
             </div>
           </motion.div>
@@ -121,14 +124,16 @@ export function Hero() {
               <Bot className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               Add to Discord
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="group glass-effect hover:scale-105 transition-all duration-300 border-primary/20 hover:border-primary/40"
-            >
-              <Discord className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Join Community
-            </Button>
+            <Link href="/docs">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group glass-effect hover:scale-105 transition-all duration-300 border-primary/20 hover:border-primary/40"
+              >
+                <Discord className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                Documentation
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
