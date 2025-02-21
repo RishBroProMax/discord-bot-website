@@ -12,38 +12,29 @@ export function Footer() {
       <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-primary">Product</h3>
+            <h3 className="text-lg font-semibold text-primary">Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Commands</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Status</a></li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-primary">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">API</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Support</a></li>
+              <li><a href="/status" className="text-muted-foreground hover:text-primary transition-colors">Status</a></li>
+              <li><a href="/docs" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a></li>
+              <li><a href="/support" className="text-muted-foreground hover:text-primary transition-colors">Support</a></li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+              <li><a href="https://imrishmika.site/#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
+              <li><a href="https://blog.imrishmika.site/" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
+              <li><a href="https://imrishmika.site/#pricing" className="text-muted-foreground hover:text-primary transition-colors"><Pricing></Pricing></a></li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</a></li>
+              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a></li>
+              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Terms</a></li>
+              <li><a href="/legal" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
         </div>
