@@ -93,7 +93,7 @@ export default function Documentation() {
             
             <div className="prose prose-invert max-w-none">
               <section id="installation" className="mb-12">
-                <Card>
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
                   <h2 className="text-2xl font-semibold mb-4">Installation</h2>
                   <p className="text-muted-foreground mb-4">
                     Getting started with our Discord bot is easy. Follow these steps to add it to your server.
