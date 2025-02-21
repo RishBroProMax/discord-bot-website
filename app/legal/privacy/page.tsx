@@ -31,7 +31,7 @@ export default function Privacy() {
           transition={{ delay: 0.1 }}
           className="space-y-8"
         >
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">Data Collection</h2>
             <p className="text-muted-foreground mb-4">
               We collect the following information when you use our Discord bot:
@@ -44,7 +44,7 @@ export default function Privacy() {
             </ul>
           </Card>
 
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">Data Usage</h2>
             <p className="text-muted-foreground mb-4">
               Your data is used exclusively for:
