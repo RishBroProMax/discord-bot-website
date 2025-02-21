@@ -93,23 +93,57 @@ export default function Documentation() {
             
             <div className="prose prose-invert max-w-none">
               <section id="installation" className="mb-12">
-                <Card className="p-6 backdrop-blur-sm bg-card/50 ">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
                   <h2 className="text-2xl font-semibold mb-4">Installation</h2>
                   <p className="text-muted-foreground mb-4">
-                    Getting started with Installing All dependencies
+                    Get started by installing all dependencies.
                   </p>
                   <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
-                    <code>npm i --force</code>
+                    <code>npm install</code>
                   </pre>
                 </Card>
 
-                <Card className="p-6 backdrop-blur-sm bg-card/50 ">
-                  <h2 className="text-2xl font-semibold mb-4">env Variables</h2>
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Environment Variables</h2>
                   <p className="text-muted-foreground mb-4">
-                    Fill All things in the env file
+                    Fill in all the necessary values in the <code>.env</code> file.
                   </p>
                   <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
-                    <code>Open ENV file</code>
+                    <code>Open the .env file and add your variables.</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="configuration" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Basic Configuration</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Configure your bot with the basic settings.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`{
+  "token": "YOUR_BOT_TOKEN",
+  "prefix": "!",
+  "ownerID": "YOUR_DISCORD_ID"
+}`}</code>
+                  </pre>
+                </Card>
+              </section>
+
+              <section id="commands" className="mb-12">
+                <Card className="p-6 backdrop-blur-sm bg-card/50">
+                  <h2 className="text-2xl font-semibold mb-4">Command Structure</h2>
+                  <p className="text-muted-foreground mb-4">
+                    Learn about the command structure and how to create new commands.
+                  </p>
+                  <pre className="bg-secondary/50 p-4 rounded-lg overflow-x-auto">
+                    <code>{`module.exports = {
+  name: "ping",
+  description: "Ping command",
+  execute(message, args) {
+    message.channel.send("Pong!");
+  }
+};`}</code>
                   </pre>
                 </Card>
               </section>
