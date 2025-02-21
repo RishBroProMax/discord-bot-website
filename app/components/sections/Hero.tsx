@@ -77,8 +77,8 @@ export function Hero() {
             <div className="relative glass-effect p-8 rounded-2xl border border-primary/20 group-hover:border-primary/40 transition-all duration-500">
               <div className="relative w-32 h-32 mx-auto transform group-hover:scale-110 transition-transform duration-500">
                 <Image
-                  src="https://raw.githubusercontent.com/StackBlitz/discord-bot-landing/main/public/bot-logo.png"
-                  alt="Bot Logo"
+                  src="https://raw.githubusercontent.com/RishBroProMax/discord-bot-landing/main/public/new-bot-logo.png"
+                  alt="New Bot Logo"
                   width={128}
                   height={128}
                   className="rounded-2xl shadow-xl"
