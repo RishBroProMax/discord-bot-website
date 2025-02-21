@@ -31,14 +31,14 @@ export default function Terms() {
           transition={{ delay: 0.1 }}
           className="space-y-8"
         >
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
               By adding our bot to your Discord server or using any of our services, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not use our services.
             </p>
           </Card>
 
-          <Card className="p-6 backdrop-blur-sm bg-card/50 border-primary/10 card-hover">
+          <Card className="p-6 backdrop-blur-sm bg-card/50">
             <h2 className="text-2xl font-semibold mb-4">2. Use License</h2>
             <p className="text-muted-foreground mb-4">
               We grant you a limited, non-exclusive, non-transferable license to:
