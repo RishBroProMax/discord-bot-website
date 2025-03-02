@@ -2,7 +2,7 @@
 
 The Futuristic Next.js Website For Discord Bot, For You 🎯
 
-![Website Screenshot](./.github/images/test.jpg)
+![Website Screenshot](./.github/images/mock.png)
 
 ## Description
 
